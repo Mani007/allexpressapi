@@ -2,8 +2,21 @@ const express = require('express')
 const app = express()
 const port = 3300
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+app.get('/getobject', (req, res) => {
+  res.send([
+    {
+      "id": 1,
+      "name": "A",
+    },
+    {
+      "id": 2,
+      "name": "B",
+    },
+    {
+      "id": 3,
+      "name": "C",
+    },
+  ])
 })
 
 app.listen(port, () => {
