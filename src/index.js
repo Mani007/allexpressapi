@@ -27,6 +27,22 @@ app.post('/postobject', (req, res) => {
   res.send(data)
 })
 
+app.put('/putobject/:id', (req, res) => {
+  if (data.some( 
+    (obj) => obj.id == req.params.id))
+ {
+  res.send({ "message": "Data already exists"})
+
+  }
+  else {
+    //data.forEach.name = req.body.name
+    data.push(req.body)
+    res.send(data) 
+  }
+ 
+})
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
