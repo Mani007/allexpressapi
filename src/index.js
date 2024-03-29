@@ -62,6 +62,25 @@ app.patch('/patchobject', (req, res) => {
  
 })
 
+app.delete('/deleteobject', (req, res) => {
+  if (data.some( 
+    (obj) => obj.id == req.body.id))
+ {
+  index_obj = data.findIndex(obj => obj.id == req.body.id)
+  //console.log(index_obj)
+  //data.map(u => u.id !== req.body.id ? u : req.body)
+  data.splice(index_obj, 1)
+  res.send(data)  
+
+  }
+  else {
+    //data.forEach.name = req.body.name
+    res.send({ "message": "Data did not exists"})
+    
+  }
+ 
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
