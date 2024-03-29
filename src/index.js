@@ -27,11 +27,12 @@ app.post('/postobject', (req, res) => {
   res.send(data)
 })
 
-app.put('/putobject/:id', (req, res) => {
+app.put('/putobject', (req, res) => {
   if (data.some( 
-    (obj) => obj.id == req.params.id))
+    (obj) => obj.id == req.body.id))
  {
   res.send({ "message": "Data already exists"})
+ 
 
   }
   else {
