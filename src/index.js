@@ -4,6 +4,11 @@ const port = 3300
 
 app.use(express.json())
 app.use(express.urlencoded())
+// Global middleware function 
+app.use((req,res,next) => {
+  console.log(req.url)
+  next()
+})
 const data = [
   {
     "id": 1,
@@ -88,7 +93,7 @@ app.get('/middleware',
   next(); // super important function to add here
 },  (req, res, next) => {
 // Main function
-res.send(data)
+res.send(data)  // you can only send the respone object once in the entire API but you can have multiple middleware functions
 next(); // super important function to add here
 }, (req, res, next) => {
   // Main function
