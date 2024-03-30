@@ -81,6 +81,15 @@ app.delete('/deleteobject', (req, res) => {
  
 })
 
+app.get('/middleware',
+ (req,res,next) => { 
+  // Middleware function here
+  console.log({ "message": "Executed as middleware" });
+  next();
+},  (req, res) => {
+// Main function
+res.send(data)
+})
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
