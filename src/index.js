@@ -109,7 +109,10 @@ next(); // super important function to add here
     })
 
 app.get('/search/:id', (req, res, next) => {
-  console.log(req.params.id)
+  //console.log(req.params.id)
+  // object destructuring 
+  const { id } = req.params
+  console.log(id)
   res.send(data.filter(obj => obj.id == req.params.id))
   next(); // super important function to add here
 });
