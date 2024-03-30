@@ -9,6 +9,7 @@ Express JS  important topics are
 - Passport JS 
 - Sessions
 - Cookies 
+- Hashing passwords
 
 Difference between PUT, POST, GET, DELETE and PATCH in HTTP Verbs:
 
