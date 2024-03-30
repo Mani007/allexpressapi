@@ -4,9 +4,9 @@ const port = 3300
 
 app.use(express.json())
 app.use(express.urlencoded())
-// Global middleware function 
+// Global middleware function but you can also apply this middleware function to specific routes as well
 app.use((req,res,next) => {
-  console.log(req.url)
+  console.log(`${req.method}: ${req.url}`)
   next()
 })
 const data = [
