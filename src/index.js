@@ -85,11 +85,16 @@ app.get('/middleware',
  (req,res,next) => { 
   // Middleware function here
   console.log({ "message": "Executed as middleware" });
-  next();
-},  (req, res) => {
+  next(); // super important function to add here
+},  (req, res, next) => {
 // Main function
 res.send(data)
-})
+next(); // super important function to add here
+}, (req, res) => {
+  // Main function
+  //res.send(data)
+  console.log({ "message": "Finished execution of middleware" });
+  })
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
