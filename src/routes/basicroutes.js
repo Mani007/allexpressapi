@@ -7,14 +7,17 @@ const data = [
     {
       "id": 1,
       "name": "A",
+      "year":2017,
     },
     {
       "id": 2,
       "name": "B",
+      "year":2018,
     },
     {
       "id": 3,
       "name": "C",
+      "year":2019,
     },
   ]
   router.get('/getobject', (req, res) => {
@@ -109,6 +112,25 @@ const data = [
     console.log(id)
     res.send(data.filter(obj => obj.id == req.params.id))
     next(); // super important function to add here
+  });
+
+  router.get('/querysearch', (req, res, next) => {
+    //console.log(req.params.id)
+    // We can also have multiple route paramters here
+    // object destructuring 
+    const { id,year } = req.query
+    //console.log(id)
+    if (id) {
+
+        res.send(data.filter(obj => obj.id == req.query.id))
+        next(); // super important function to add here
+    } else if (year) {
+        res.send(data.filter(obj => obj.year == req.query.year))
+        next(); 
+    } else {
+        res.send(data)
+        next(); 
+    }
   });
 
   module.exports = router;

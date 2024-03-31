@@ -4,7 +4,7 @@ Express JS  important topics are
 - Middleware
 - Routes and Routers
 - Route parameters
-- Query parameters 
+- Query parameters  //https://yourdomain.com/?q=java&key=abc ....
 - Authentication - JWT Authentication
 - Database Connection 
 - Passport JS 
