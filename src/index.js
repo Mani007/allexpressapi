@@ -1,10 +1,12 @@
 const express = require('express')
 const basicRoutes = require('./routes/basicroutes')
+const cookieParser = require('cookie-parser')
 const app = express()
 const port = 3300
 
 app.use(express.json())
 app.use(express.urlencoded())
+app.use(cookieParser())
 // Global middleware function but you can also apply this middleware function to specific routes as well
 // Order of middleware is also important  in executions of express API functions
 // app.use((req,res,next) => {
