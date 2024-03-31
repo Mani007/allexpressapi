@@ -3,6 +3,7 @@ Top API in espress js are **GET, POST, PUT, PATCH and DELETE.**
 Express JS  important topics are   
 - Middleware
 - Routes and Routers
+- Route parameters
 - Query parameters 
 - Authentication - JWT Authentication
 - Database Connection 
@@ -10,6 +11,9 @@ Express JS  important topics are
 - Sessions
 - Cookies 
 - Hashing passwords
+- API testing
+- Swagger Documentation
+- API versioning
 
 Difference between PUT, POST, GET, DELETE and PATCH in HTTP Verbs:
 

@@ -110,6 +110,7 @@ next(); // super important function to add here
 
 app.get('/search/:id', (req, res, next) => {
   //console.log(req.params.id)
+  // We can also have multiple route paramters here
   // object destructuring 
   const { id } = req.params
   console.log(id)
