@@ -7,17 +7,17 @@ const data = [
     {
       "id": 1,
       "name": "A",
-      "year":2017,
+      "year":"2017",
     },
     {
       "id": 2,
       "name": "B",
-      "year":2018,
+      "year":"2018",
     },
     {
       "id": 3,
       "name": "C",
-      "year":2019,
+      "year":"2019",
     },
   ]
   router.get('/getobject', (req, res) => {
@@ -124,7 +124,7 @@ const data = [
 
         res.send(data.filter(obj => obj.id == req.query.id))
         next(); // super important function to add here
-    } else if (year) {
+    } else if (parseInt(year) ) {
         res.send(data.filter(obj => obj.year == req.query.year))
         next(); 
     } else {
