@@ -21,6 +21,9 @@ const data = [
     },
   ]
   router.get('/getobject', (req, res) => {
+    res.cookie('visited', true, {
+        maxAge: 1000
+    })
     res.send(data)
   })
   

@@ -3,13 +3,14 @@ Top API in espress js are **GET, POST, PUT, PATCH and DELETE.**
 Express JS  important topics are   
 - Middleware
 - Routes and Routers
-- Route parameters
-- Query parameters  //https://yourdomain.com/?q=java&key=abc ....
+- Route parameters - used to identify a resource in server. Generally saved in database.
+- Query parameters  //https://yourdomain.com/?q=java&key=abc .... and these are mostly used for fuction like sorting and searching on the data pulled from the api. Also use of pagination is optional. 
+- pagination, limit and offset 
 - Authentication - JWT Authentication
 - Database Connection 
 - Passport JS 
 - Sessions
-- Cookies 
+- Cookies  - inter api communication such as state maintainece of shopping cart
 - Hashing passwords
 - API testing
 - Swagger Documentation
