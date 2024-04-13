@@ -35,8 +35,19 @@ const data = [
   })
 
   router.post('/session/post', (req, res) => {
-    data.push(req.body)
-    res.send(req.sessionID)
+    const {id, name, year} = req.body
+    const databody = {id, name, year}
+    const {cart} = req.session
+    if (cart) {
+      req.session.cart.items.push(databody)
+    } else {
+      req.session.cart = {
+        items: [databody],
+      }
+    }
+
+    //data.push(req.body)
+    res.send({data: data, session : req.session})
   })
   
   router.post('/postobject', (req, res) => {

@@ -12,7 +12,7 @@ app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: true }
+ 
 }))
 // Global middleware function but you can also apply this middleware function to specific routes as well
 // Order of middleware is also important  in executions of express API functions
