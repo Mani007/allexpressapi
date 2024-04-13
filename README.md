@@ -10,7 +10,7 @@ Express JS  important topics are
 - Database Connection 
 - Passport JS 
 - Sessions
-- Cookies  - inter api communication such as state maintainece of shopping cart
+- Cookies  - inter api communication such as state maintainece of shopping cart and need to install middle ware for parsing cookies from the client side. Best Video so far is https://www.youtube.com/watch?v=2so3hh8n-3w&ab_channel=AnsontheDeveloper
 - Hashing passwords
 - API testing
 - Swagger Documentation

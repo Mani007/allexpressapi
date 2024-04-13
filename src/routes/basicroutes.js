@@ -27,6 +27,17 @@ const data = [
     console.log(req.cookies)
     res.send(data)
   })
+
+  // http://localhost:3300/api/v1/ 
+  router.get('/session/test', (req, res) => {
+    res.send(data)
+
+  })
+
+  router.post('/session/post', (req, res) => {
+    data.push(req.body)
+    res.send(req.session)
+  })
   
   router.post('/postobject', (req, res) => {
     data.push(req.body)
