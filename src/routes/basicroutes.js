@@ -2,7 +2,7 @@ const {Router} = require('express')
 const router = Router()
 
 
-
+ // The base URL route is http://localhost:3300/api/v1/ 
 const data = [
     {
       "id": 1,
@@ -28,7 +28,7 @@ const data = [
     res.send(data)
   })
 
-  // http://localhost:3300/api/v1/ 
+ 
   router.get('/session/test', (req, res) => {
     res.send(data)
 
@@ -36,7 +36,7 @@ const data = [
 
   router.post('/session/post', (req, res) => {
     data.push(req.body)
-    res.send(req.session)
+    res.send(req.sessionID)
   })
   
   router.post('/postobject', (req, res) => {
