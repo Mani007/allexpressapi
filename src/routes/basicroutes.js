@@ -30,12 +30,17 @@ const data = [
 
  
   router.get('/session/test', (req, res) => {
-    res.send(data)
-
+    //res.send(data)
+    const {cart} = req.session
+    if (cart) {
+      res.send(cart)
+    } else {
+      res.send("You have empty cart!")
+    }
   })
 
   router.post('/session/post', (req, res) => {
-    const {id, name, year} = req.body
+    const {id, name, year} = req.body 
     const databody = {id, name, year}
     const {cart} = req.session
     if (cart) {
