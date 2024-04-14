@@ -10,7 +10,7 @@ app.use(express.urlencoded())
 app.use(cookieParser())
 app.use(session({
   secret: 'keyboard cat',
-  resave: false,
+  resave: true,
   saveUninitialized: false,
  
 }))
